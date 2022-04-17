@@ -19,7 +19,11 @@ are used in other applications as well, like Bitcoin, Minecraft and many others.
 
 From this point on, any `DataView` will have a `getVarint` method.
 
-### ES Modules
+### ES Modules (browser and Node)
+
+Use `--experimental-network-imports` with Node for HTTP(S) ESM URL support:
+
+https://nodejs.org/api/esm.html#https-and-http-imports
 
 ```js
 import 'https://tomashubelbauer.github.io/esm-dataview-getvarint/index.js';
@@ -27,22 +31,7 @@ import 'https://tomashubelbauer.github.io/esm-dataview-getvarint/index.js';
 // From this point on, any `DataView` will have a `getVarint` method.
 ```
 
-### Git Submodules
-
-```sh
-git submodule add https://github.com/tomashubelbauer/esm-dataview-getvarint
-```
-
-Once installed locally like this, either a `script` tag or ESM can be used to
-reference the script as per above.
-
-### NPM
-
-This library is not on NPM.
-
 ## Usage & API
-
-Reference the library as per [Installation](#installation).
 
 ```js
 /** @type {DataView} */
